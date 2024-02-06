@@ -1,0 +1,83 @@
+<div class="card shadow mt-3 p-3 col">
+  <form (ngSubmit)="guardar(f)" #f="ngForm" class="row ">
+    <div class="row ">
+      <div class="row">
+        <h4>Información general</h4>
+      </div>
+      <div class="col-6">
+        <div class="form-floating col mb-2">
+          <input type="text" class="form-control" placeholder="nombre del programa" value="" name="nombre" ngModel
+            required>
+          <label for="nombre" class="label">Programa: </label>
+        </div>
+        <div class="form-floating col mb-2">
+          <input type="text" class="form-control" placeholder="nombre del titular" name="titular" ngModel required>
+          <label for="titular" class="label">Locutor: </label>
+        </div>
+        <div class="form-floating col mb-2">
+          <input type="text" class="form-control" placeholder="días de emisión" name="emision" ngModel required>
+          <label for="emision" class="label">Emisión: </label>
+        </div>
+        <div class="form-floating col mb-2">
+          <input type="text" class="form-control" placeholder="horario" name="horario" ngModel required>
+          <label for="horario" class="label">Horario: </label>
+        </div>
+        <div class="form-floating col mb-2">
+          <input type="text" class="form-control" placeholder="información del programa" name="detalles" ngModel
+            required>
+          <label for="detalles" class="label">Detalles: </label>
+        </div>
+      </div>
+      <div class="col-6">
+        <img [src]="imgForm" class=" shadow img-fluid d-block mx-auto img-thumbnail" style="height: 300px;"
+          alt="Descripción de la imagen">
+        <div class="mt-2 input-group">
+          <input type="file" name='img' ngModel class="form-control" id="imagen" aria-describedby="imagen"
+            aria-label="Upload">
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <button class="btn btn-outline-primary " type="submit">Guardar programa</button>
+    </div>
+  </form>
+
+
+  <div class="container mt-3 card shadow">
+    <div class="col">
+      <h4>Parrila</h4>
+    </div>
+    <div class="row px-3">
+      <div class="col-6">
+        <div class="card shadow mb-3" style="width: 500px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <div class="container ">
+                <img [src]="imgForm" class=" mt-3 img-fluid " alt="imagen programa">
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body pb-0">
+                <div class="col mt-0 mb-0">
+                <h5 class="card-title"><small class="text-muted">Nombre:</small> Programa1</h5>
+                <h6 class="card-title"><small class="text-muted">Locutor:</small> Nombre</h6>
+                <h6 class="card-title"><small class="text-muted">Emisión:</small> Lunes/19:00</h6>
+                <p class="card-title  "><small class="text-muted">Detalles:</small>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente facilis quam
+                </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="row mb-2 mt-0 me-4 ms-4">
+            <button title="¿Quieres cancelar el programa?" class="btn-sm btn  btn-outline-danger" >Cancelar programa</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
